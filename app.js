@@ -51,10 +51,10 @@ function game() {
         snake.cells.pop();
     };
 
-    context.fillStyle = 'red';
+    context.fillStyle = 'green';
     context.fillRect(food.x, food.y, grid - 1, grid - 1);
 
-    context.fillStyle = 'green';
+    context.fillStyle = 'purple';
 
     snake.cells.forEach(function(cell , index) { // Обработка каждого элемента змейки
         context.fillRect(cell.x, cell.y, grid - 1, grid - 1); // для черной сетки вокруг клеток
