@@ -29,12 +29,33 @@
         top: 200px;
         font-size: 60px;
       }
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        background: #741111;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+
+        text-transform: uppercase;
+        text-decoration: none;
+
+        cursor: pointer;
+
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
     </style>
     <title>Snake-game</title>
   </head>
   <body>
     <canvas id="gameField" width="400" height="400"></canvas>
     <div id="scoreBar">Score:<span id="value">0</span></div>
+    <button onclick="change_color()" type="button" class="btn">
+      Random theme
+    </button>
     <script src="./app.js"></script>
   </body>
 </html>
