@@ -24,9 +24,12 @@ function getRandom(min, max) {
 
 function game() {
     requestAnimationFrame(game); 
-    if(++count < 4) {  // Замедление до 15 FPS
+    if(++count < 5) {  
         return;
     };
+
+
+    document.getElementById("value").innerHTML = score;
 
     count = 0;
     context.clearRect(0, 0, canvas.width, canvas.height); //Очищение поля
@@ -61,6 +64,7 @@ function game() {
 
         if (cell.x === food.x && cell.y === food.y) { 
             snake.maxCells++;
+            score++;
             food.x = getRandom(0, 25) * grid; // Всего в поле 25 ячеек
             food.y = getRandom(0, 25) * grid;
         };
@@ -73,6 +77,7 @@ function game() {
                 snake.maxCells = 4;
                 snake.dx = grid;
                 snake.dy = 0;
+                score = 0;
     
                 food.x = getRandom(0, 25) * grid;
                 food.y = getRandom(0, 25) * grid;

@@ -18,15 +18,23 @@
         justify-content: center;
       }
 
-      canvas {
-        border: 1px solid white;
+      #gameField {
+        border: 8px solid white;
         background: black;
+      }
+      #scoreBar {
+        margin: 0;
+        color: aliceblue;
+        position: absolute;
+        top: 200px;
+        font-size: 60px;
       }
     </style>
     <title>Snake-game</title>
   </head>
   <body>
     <canvas id="gameField" width="400" height="400"></canvas>
+    <div id="scoreBar">Score:<span id="value">0</span></div>
     <script src="./app.js"></script>
   </body>
 </html>
