@@ -18,6 +18,36 @@ let food = {
 };
 
 
+
+function Dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  window.onclick = function(event) {
+    if (!event.target.matches('.btn')) {
+      var dropdowns = document.getElementsByClassName("content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        };
+      };
+    };
+  }; 
+
+function Light() {
+    document.getElementsByTagName('body')[0].style.background = "#" + 'd5cbcb';
+}
+
+function Dark() {
+    document.getElementsByTagName('body')[0].style.background = "#" + '070214';
+}
+
+function Obsidian() {
+    document.getElementsByTagName('body')[0].style.background = "#" + '210c57';
+}
+
 function change_color() {
     let hex_numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
     "A", "B", "C", "D", "E", "F"];

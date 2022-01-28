@@ -4,58 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-      }
-
-      body {
-        background: rgb(5, 0, 12);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      #gameField {
-        border: 8px solid white;
-        background: black;
-      }
-      #scoreBar {
-        margin: 0;
-        color: aliceblue;
-        position: absolute;
-        top: 200px;
-        font-size: 60px;
-      }
-      .btn {
-        padding: 10px 20px;
-        font-size: 0.875rem;
-        font-weight: bold;
-        background: #741111;
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-
-        text-transform: uppercase;
-        text-decoration: none;
-
-        cursor: pointer;
-
-        position: absolute;
-        right: 20px;
-        top: 20px;
-      }
-    </style>
+    <link href="./style.css" rel="stylesheet" />
     <title>Snake-game</title>
   </head>
   <body>
+    <audio class="music" loop autoplay>
+      <source
+        src="./Audio/femlove_-_otografiruyu_zakat_72911325.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
     <canvas id="gameField" width="400" height="400"></canvas>
     <div id="scoreBar">Score:<span id="value">0</span></div>
-    <button onclick="change_color()" type="button" class="btn">
-      Random theme
-    </button>
+    <div class="dropdown">
+      <button onclick="Dropdown()" class="btn">Change theme</button>
+      <div id="myDropdown" class="content">
+        <a href="#" onclick="Light()">Light</a>
+        <a href="#" onclick="Dark()">Dark</a>
+        <a href="#" onclick="Obsidian()">Obsidian</a>
+        <a href="#" onclick="change_color()">Random</a>
+      </div>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>

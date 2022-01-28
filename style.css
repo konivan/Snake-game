@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: rgb(5, 0, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameField {
+  border: 8px solid white;
+  background: black;
+}
+#scoreBar {
+  margin: 0;
+  color: aliceblue;
+  position: absolute;
+  top: 200px;
+  font-size: 60px;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  background: #741111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  right: 20px;
+}
+.content {
+  display: none;
+  position: absolute;
+  background-color: #6b0909;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  border: none;
+  border-radius: 6px;
+}
+.content a {
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.music {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+.show {
+  display: block;
+}
